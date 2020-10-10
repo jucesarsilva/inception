@@ -1,0 +1,21 @@
+.buttonOrder {
+  font-weight: bold !important;
+  .selectedLabel {
+    font-size: 12px;
+    text-transform: capitalize;
+    line-height: 0px;
+  }
+}
+.option {
+  justify-content: center;
+  align-items: center;
+}
+.iconPlus {
+  font-size: 12px;
+  color: var(--color-primary40);
+}
+.iconMinus {
+  color: var(--color-primary40);
+  font-size: 12px;
+}
+

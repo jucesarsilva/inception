@@ -1,9 +1,22 @@
 .home {
   position: relative;
   width: 100%;
+  .filters {
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+  }
   .repositories {
     .description {
       position: relative;
+      word-break: break-word;
     }
   }
+}
+.paginatorContent {
+  justify-content: center;
+  align-items: center;
+}
+.notResult {
+  font-weight: bold;
 }

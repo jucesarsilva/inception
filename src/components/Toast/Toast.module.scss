@@ -1,0 +1,40 @@
+.toast {
+  box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2),
+  0px 6px 10px 0px rgba(0,0,0,0.14),
+  0px 1px 18px 0px rgba(0,0,0,0.12);
+}
+.default {
+  > div {
+    color: var(--color-white);
+    font-weight: 500;
+    background-color: var(--color-accent40);
+  }
+}
+.error {
+  > div {
+    color: var(--color-white);
+    font-weight: 500;
+    background-color: var(--color-red40);
+  }
+}
+.warning {
+  > div {
+    color: var(--color-white);
+    font-weight: 500;
+    background-color: var(--color-warning40);
+  }
+}
+.success {
+  > div {
+    color: var(--color-white);
+    font-weight: 500;
+    background-color: var(--color-action20);
+  }
+}
+.info {
+  > div {
+    color: var(--color-white);
+    font-weight: 500;
+    background-color: var(--color-primary20);
+  }
+}

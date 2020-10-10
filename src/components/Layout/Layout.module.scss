@@ -8,4 +8,23 @@
   background: var(--color-accent10);
   box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.4);
   min-height: calc(100% - var(--header-height));
+  .toTop {
+    position: fixed;
+    background: var(--color-accent40) !important;
+    &:hover {
+      opacity: 0.9;
+    }
+    span {
+      font-size: 14px;
+      color: var(--color-white);
+    }
+  }
+  .toTopPositionDesk {
+    bottom: 10px;
+    right: 10px;
+  }
+  .toTopPositionMob {
+    bottom: 2px;
+    right: 2px;
+  }
 }

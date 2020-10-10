@@ -16,11 +16,7 @@ class Requester {
   }
 
   handleCatch = (error, reject) => {
-    if(error.isAxiosError) {
-      reject('Verifique sua conexão.')
-    } else {
-      reject({ status: error.response.status, data: error.response.data })
-    }
+    reject(error.response)
   }
 
   getApis() {

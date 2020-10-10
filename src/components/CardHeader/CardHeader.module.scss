@@ -13,14 +13,20 @@
   .title {
     text-decoration: none;
     color: var(--color-primary40);
+    word-break: break-word;
   }
   .title:hover {
     color: var(--color-primary30);
+  }
+  .subHeader {
+    justify-content: flex-start;
+    align-items: baseline;
   }
   .license {
     font-weight: bold;
     font-size: 12px;
     font-weight: 600;
     color: var(--color-accent20);
+    word-break: break-word;
   }
 }

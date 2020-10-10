@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSearch } from '@fortawesome/free-solid-svg-icons'
+import { faSearch, faTimesCircle } from '@fortawesome/free-solid-svg-icons'
 
 import styles from './InputSearch.module.scss'
 
@@ -44,20 +44,29 @@ class InputSearch extends React.Component {
     }
   }
 
+  handlerClean = () => {
+    this.setState({ value: '' }, () => {
+      this.handlerSearch()
+    })
+  }
+
   render() {
+    const { value } = this.state
     return (
       <label className={styles.inputSearch} htmlFor='inputSearch'>
         <input
+          value={value}
           autoComplete='false'
-          className='p-l-normal p-r-xlarge'
+          className='p-l-normal'
           placeholder='Pesquisar'
           name='inputSearch'
           type='text'
           onChange={this.handleChange}
           onKeyDown={this.handleKeyDown}
         />
-        <div className={styles.iconSearch} onClick={this.handlerClick}>
-          <FontAwesomeIcon icon={faSearch} />
+        <div className={styles.iconSearch} >
+          <FontAwesomeIcon className='m-r-small' icon={faTimesCircle} onClick={this.handlerClean}/>
+          <FontAwesomeIcon icon={faSearch} onClick={this.handlerClick} />
         </div>
       </label>
     )
