@@ -1,0 +1,31 @@
+.button {
+  position: relative;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.action {
+  background: var(--color-action40);
+  color: var(--color-white);
+  border-radius: var(--size-small);
+  padding: var(--size-small) var(--size-normal);
+  &:hover {
+    background: var(--color-action30);
+  }
+}
+.primary {
+  background: var(--color-primary40);
+  color: var(--color-white);
+  border-radius: var(--size-small);
+  padding: var(--size-small) var(--size-normal);
+  &:hover {
+    background: var(--color-primary30);
+  }
+}

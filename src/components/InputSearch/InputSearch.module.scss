@@ -1,0 +1,37 @@
+.inputSearch {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  border-radius: 6px;
+  background: var(--color-accent20);
+
+  :focus {
+    background: var(--color-white);
+  }
+
+  input {
+    border: none;
+    width: fit-content;
+    height: inherit;
+    outline: none;
+    color: var(--color-white);
+    background: inherit;
+    border-radius: 6px;
+  }
+
+  input:focus {
+    color: var(--color-accent40);
+  }
+
+  .iconSearch {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    color: var(--color-white);
+    cursor: pointer;
+  }
+
+  &:focus-within > .iconSearch {
+    color: var(--color-accent40);
+  }
+}

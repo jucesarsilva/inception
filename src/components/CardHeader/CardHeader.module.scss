@@ -1,0 +1,26 @@
+.cardHeader {
+  justify-content: space-between;
+  align-items: flex-start;
+  .avatar {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    min-height: 32px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+  }
+  .title {
+    text-decoration: none;
+    color: var(--color-primary40);
+  }
+  .title:hover {
+    color: var(--color-primary30);
+  }
+  .license {
+    font-weight: bold;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--color-accent20);
+  }
+}

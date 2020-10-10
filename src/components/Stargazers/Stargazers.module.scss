@@ -1,0 +1,11 @@
+.stargazers {
+  justify-content: flex-start;
+  align-items: center;
+  .star {
+    color: var(--color-warning30);
+  }
+  .count {
+    font-size: 12px;
+    font-weight: 600;
+  }
+}

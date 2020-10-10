@@ -1,0 +1,11 @@
+.layout {
+  display: block;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 640px;
+  margin: 0 auto;
+  padding-top: var(--header-height);
+  background: var(--color-accent10);
+  box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.4);
+  min-height: calc(100% - var(--header-height));
+}

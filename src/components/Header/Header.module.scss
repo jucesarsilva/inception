@@ -1,0 +1,18 @@
+.header {
+  position: fixed;
+  top: 0;
+  width: -webkit-fill-available;
+  z-index: 2;
+  .toolbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 28px;
+    background: var(--color-accent40);
+    .logo {
+      display: flex;
+      fill: var(--color-white);
+    }
+  }
+}
