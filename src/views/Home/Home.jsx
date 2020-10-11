@@ -102,7 +102,7 @@ class Home extends React.Component {
     if (!repositories || !repositories.length) {
       return (
         <div className={`m-tb-large ${styles.notResult}`}>
-          Nenhum resultado.
+          <div data-test-id="no-results">Nenhum resultado.</div>
         </div>
       )
     }
@@ -121,7 +121,7 @@ class Home extends React.Component {
           />
           <hr />
           {repository.description && repository.description.length ? (
-            <div
+            <div data-test-id={`description-${index}`}
               className={`${styles.description} m-t-xlarge`}
               dangerouslySetInnerHTML={{ __html: repository.description }}
             ></div>
@@ -144,11 +144,11 @@ class Home extends React.Component {
 
     return (
       <Fragment>
-        <div className={`column p-b-normal ${styles.home}`}>
+        <div data-test-id='home-component' className={`column p-b-normal ${styles.home}`}>
           <h2>Repositórios</h2>
           <div className={`row m-b-normal ${styles.filters}`}>
             <FilterOrder onOrder={this.handleOrder} orders={orders} order={orders[0]} />
-            <div className='m-l-xsmall'>
+            <div data-test-id="total" className='m-l-xsmall'>
               <span className='label bold m-r-xsmall'>Total:</span>
               <span className='label'>{total}</span>
             </div>
@@ -157,7 +157,7 @@ class Home extends React.Component {
           {fetching ? <Loading /> : this.renderRepositories(repositories)}
           {!fetching && repositories.length ? (
             <div className={`row p-tb-normal ${styles.paginatorContent}`}>
-              <Paginator pageCount={pageCount} currentPage={page} onChange={this.handlePageChange} />
+              <Paginator data-test-id="paginator" pageCount={pageCount} currentPage={page} onChange={this.handlePageChange} />
             </div>
           ) : null}
           {error ? <Toast severity='error' message={errorMessage} onClose={this.handleTostClose}/> : null }
