@@ -133,7 +133,8 @@ describe('Home component', () => {
     })
 
     it('when results', () => {
-      const repositories = [{
+      const length = 40
+      const repitory = {
         full_name: 'react teste',
         description: 'react description',
         html_url: 'https://github.com/user/react',
@@ -148,11 +149,14 @@ describe('Home component', () => {
         license: {
           name: 'Mit'
         }
-      }]
+      }
+      const repositories = new Array(length).fill().map((e) => {
+        return repitory
+      })
       const wrapper = mount(<Home />)
-      wrapper.setState({ fetching: false, total: 1, pageCount: 1, repositories: repositories })
+      wrapper.setState({ fetching: false, total: length, pageCount: 2, repositories: repositories })
       expect(wrapper.find('[data-test-id="description-0"]').text()).toEqual('react description')
-      expect(wrapper.find('[data-test-id="paginator"]').text()).toEqual('1')
+      expect(wrapper.find('[data-test-id="paginator"]').text()).toEqual('12')
     })
   })
 })
