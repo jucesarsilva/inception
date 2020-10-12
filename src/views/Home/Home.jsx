@@ -155,7 +155,7 @@ class Home extends React.Component {
           </div>
           <hr/>
           {fetching ? <Loading /> : this.renderRepositories(repositories)}
-          {!fetching && repositories.length ? (
+          {!fetching && repositories.length && pageCount > 1 ? (
             <div className={`row p-tb-normal ${styles.paginatorContent}`}>
               <Paginator data-test-id="paginator" pageCount={pageCount} currentPage={page} onChange={this.handlePageChange} />
             </div>
