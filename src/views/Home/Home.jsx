@@ -72,7 +72,7 @@ class Home extends React.Component {
         const repositories = response.items
         const total = response.total_count
         this.setState({ repositories, total }, () => {
-          const pageCount = parseInt(total/perPage)
+          const pageCount = Math.ceil(total/perPage)
           this.setState({ fetching: false, pageCount: pageCount })
         })
       })
