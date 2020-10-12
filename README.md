@@ -1,8 +1,13 @@
 # Inception GitHub
 Projeto para consumo e exibição de repositórios GitHub
 
-## Estudar
-https://github.com/roderickhsiao/react-in-viewport
+## DEMO
+[Demo](https://jucesarsilva.github.io/inception/)
+
+# Deploy on github page
+```
+yarn deploy
+```
 
 # Docs
 Guideline de estilos:
